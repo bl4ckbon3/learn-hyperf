@@ -11,6 +11,10 @@ declare(strict_types=1);
  */
 return [
     'http' => [
+        Hyperf\Tracer\Middleware\TraceMiddleware::class,
         Hyperf\Validation\Middleware\ValidationMiddleware::class,
     ],
+    'graphql' => [
+        Menumbing\Tracer\Middleware\TraceMiddleware::class,
+    ]
 ];
