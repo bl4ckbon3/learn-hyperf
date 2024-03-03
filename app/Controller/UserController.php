@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\User;
+use App\Service\BalanceDeductorService;
+use App\Service\MailSenderService;
 use Hyperf\Di\Annotation\Inject;
 use Hyperf\HttpServer\Annotation\Controller;
 use Hyperf\HttpServer\Annotation\GetMapping;
@@ -20,6 +22,12 @@ class UserController extends AbstractController
 {
     #[Inject]
     protected AuthManagerInterface $authManager;
+
+    #[Inject]
+    protected MailSenderService $mailSender;
+
+    #[Inject]
+    protected BalanceDeductorService $balanceDeductor;
 
     #[PostMapping(path: '/users')]
     public function store(): User
@@ -39,5 +47,14 @@ class UserController extends AbstractController
     public function me()
     {
         return $this->authManager->guard()->user();
+    }
+
+    #[PostMapping(path: '/emails')]
+    public function sendEmail()
+    {
+        $this->mailSender->sendMail($this->request->input('email'), $this->request->input('text'));
+        //$this->balanceDeductor->deduct(10);
+
+        return 'Mail sent';
     }
 }
