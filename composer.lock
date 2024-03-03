@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38d85ab3783f65282116dfb55637d70c",
+    "content-hash": "18e4d40ab19a8d746f265080baa00690",
     "packages": [
         {
             "name": "brick/math",
@@ -925,6 +925,73 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+        },
+        {
+            "name": "hyperf-extension/hashing",
+            "version": "3.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf-extension/hashing.git",
+                "reference": "8930e17f0f34249f8cae460198b5675a585a1d29"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf-extension/hashing/zipball/8930e17f0f34249f8cae460198b5675a585a1d29",
+                "reference": "8930e17f0f34249f8cae460198b5675a585a1d29",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf/config": "^3.0.0",
+                "hyperf/di": "^3.0.0",
+                "hyperf/framework": "^3.0.0",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/testing": "^3.0.0",
+                "phpstan/phpstan": "^0.12",
+                "swoole/ide-helper": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "HyperfExtension\\Hashing\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HyperfExtension\\Hashing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "angeltxwh",
+                    "email": "admin@ilover.me"
+                },
+                {
+                    "name": "Eric Zhu",
+                    "email": "eric@zhu.email"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Hyperf Hashing package.",
+            "keywords": [
+                "hashing",
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf-extension/hashing/issues",
+                "source": "https://github.com/hyperf-extension/hashing/tree/3.1.4"
+            },
+            "time": "2024-01-23T22:22:45+00:00"
         },
         {
             "name": "hyperf/cache",
@@ -4091,6 +4158,96 @@
                 }
             ],
             "time": "2024-01-19T12:39:49+00:00"
+        },
+        {
+            "name": "menumbing/auth",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/menumbing/auth.git",
+                "reference": "1d7c45f9d2b56252c310a6ca8353eebd3611d17a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/menumbing/auth/zipball/1d7c45f9d2b56252c310a6ca8353eebd3611d17a",
+                "reference": "1d7c45f9d2b56252c310a6ca8353eebd3611d17a",
+                "shasum": ""
+            },
+            "require": {
+                "hyperf-extension/hashing": "^3.1",
+                "hyperf/command": "^3.1",
+                "hyperf/config": "^3.1",
+                "hyperf/database": "^3.1",
+                "hyperf/db-connection": "^3.1",
+                "hyperf/di": "^3.1",
+                "hyperf/framework": "^3.1",
+                "hyperf/macroable": "^3.1",
+                "menumbing/resource": "^1.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "hyperf/testing": "^3.1",
+                "mockery/mockery": "^1.0",
+                "phpstan/phpstan": "^0.12",
+                "swoole/ide-helper": "dev-master"
+            },
+            "suggest": {
+                "hyperf-extension/cookie": "Required to use session guard.--Not Support Temporary",
+                "hyperf-extension/jwt": "Required to use JWT guard.",
+                "hyperf/session": "Required to use session guard."
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.0-dev"
+                },
+                "hyperf": {
+                    "config": "HyperfExtension\\Auth\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HyperfExtension\\Auth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "angeltxwh",
+                    "email": "admin@ilover.me"
+                },
+                {
+                    "name": "Eric Zhu",
+                    "email": "eric@zhu.email"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Gently",
+                    "email": "xiangjihan@gmail.com"
+                },
+                {
+                    "name": "Iqbal Maulana",
+                    "email": "iq.bluejack@gmail.com"
+                }
+            ],
+            "description": "The Hyperf Auth package.",
+            "keywords": [
+                "auth",
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "source": "https://github.com/menumbing/auth/tree/main"
+            },
+            "time": "2024-02-28T16:24:22+00:00"
         },
         {
             "name": "menumbing/contracts",
@@ -7768,6 +7925,72 @@
                 }
             ],
             "time": "2023-12-17T08:53:12+00:00"
+        },
+        {
+            "name": "hyperf/watcher",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyperf/watcher.git",
+                "reference": "8c7e5c510ad96ea917f8c133a24661a0b2247d7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyperf/watcher/zipball/8c7e5c510ad96ea917f8c133a24661a0b2247d7c",
+                "reference": "8c7e5c510ad96ea917f8c133a24661a0b2247d7c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-posix": "*",
+                "hyperf/codec": "~3.1.0",
+                "hyperf/command": "~3.1.0",
+                "hyperf/di": "~3.1.0",
+                "hyperf/framework": "~3.1.0",
+                "hyperf/support": "~3.1.0",
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                },
+                "hyperf": {
+                    "config": "Hyperf\\Watcher\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Functions.php"
+                ],
+                "psr-4": {
+                    "Hyperf\\Watcher\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Hot reload watcher for Hyperf",
+            "keywords": [
+                "dev",
+                "hyperf",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/hyperf/watcher/issues",
+                "source": "https://github.com/hyperf/watcher/tree/v3.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://hyperf.wiki/#/zh-cn/donate",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://opencollective.com/hyperf",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-11-24T03:10:53+00:00"
         },
         {
             "name": "mockery/mockery",
